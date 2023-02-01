@@ -102,6 +102,9 @@ diccionarioCaracteres = {
 }
 
 siLongitud = False
+siMayusculas = False
+siNumeros = False
+siSimbolos = False
 
 while siLongitud == False:
     longitud = input("Introduce de cuantos caracteres quieres la contraseña: ")
@@ -112,8 +115,6 @@ while siLongitud == False:
     else:
         print("Esa longitud no entra dentro del rango establecido de 8-16 caracteres")
         time.sleep(2)
-
-siMayusculas = False
 
 while siMayusculas == False:
     mayusculas = input("Introduce si quieres incluir mayusculas o no (si o no): ")
@@ -127,14 +128,51 @@ while siMayusculas == False:
             mayusculas = False
         siMayusculas = True
         if mayusculas == True:
-            print("Se generara una contaseña con mayusculas")
+            print("Se generara una contraseña con mayusculas")
         elif mayusculas == False:
             print("Se generara una contraseña sin mayusculas")
         else:
             print("Error inesperado :(")
             time.sleep(2)
-'''
-def generadorContrasenyas(entrada):
-    for i in range(0, entrada):
 
-'''
+while siNumeros == False:
+    numeros = input("Introduce si quieres incluir numeros o no (si o no): ")
+    if numeros != "si" and numeros != "no":
+        print("Esa respuesta no es valida, por favor introduzca si o no")
+        time.sleep(2)
+    else:
+        if numeros == "si":
+            numeros = True
+        elif numeros == "no":
+            numeros = False
+        siNumeros = True
+        if numeros == True:
+            print("Se generara una contraseña con numeros")
+        elif numeros == False:
+            print("Se generara una contraseña sin numeros")
+        else:
+            print("Error inesperado :(")
+            time.sleep(2)
+
+while siSimbolos == False:
+    simbolos = input("Introduce si quieres incluir simbolos o no (si o no): ")
+    if simbolos != "si" and simbolos != "no":
+        print("Esa respuesta no es valida, por favor introduzca si o no")
+        time.sleep(2)
+    else:
+        if simbolos == "si":
+            simbolos = True
+        elif simbolos == "no":
+            simbolos = False
+        siSimbolos = True
+        if simbolos == True:
+            print("Se generara una contraseña con simbolos")
+        elif simbolos == False:
+            print("Se generara una contraseña sin simbolos")
+        else:
+            print("Error inesperado :(")
+            time.sleep(2)
+
+def generadorContrasenyas(longitud, mayusculas, numeros, simbolos):
+    for i in range(0, longitud):
+        return 0
