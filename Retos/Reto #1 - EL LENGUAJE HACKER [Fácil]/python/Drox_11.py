@@ -27,15 +27,15 @@ diccionario = {
     "z": "2"
 }
 
-def traducir(texto):
-    texto = texto.lower()
-    traduccion = ""
-    for letra in texto:
-        if letra in diccionario:
-            traduccion += diccionario[letra]
+def leet(frase):
+    frase = frase.lower()
+    textoFinal = ""
+    for i in frase:
+        if i in diccionario:
+            textoFinal += diccionario[i]
         else:
-            traduccion += letra
-    return traduccion
+            textoFinal += i
+    return textoFinal
 
-texto = input("Ingresa el texto a traducir: ")
-print(traducir(texto))
+entrada = input("Introduce el texto para convertir en leet: ")
+print(leet(entrada))
